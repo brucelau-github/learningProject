@@ -9,12 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var Hero = (function () {
-    function Hero() {
-    }
-    return Hero;
-}());
-exports.Hero = Hero;
 var HEROES = [
     { id: 11, name: 'Mr. Nice' },
     { id: 12, name: 'Narco' },
@@ -38,7 +32,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n \t<h1> {{ title }} </h1>\n \t<div *ngIf=\"selectedHero\">\n\t<h2>{{selectedHero.name}} details!</h2>\n\t<div><label>id: </label>{{selectedHero.id}}</div>\n\t<div>\n\t<label>name: </label>\n\t<input [(ngModel)]=\"selectedHero.name\" placeholder=\"name\"/>\n\t</div>\n \t</div>\n \t<h2>details! </h2>\n\t<ul class=\"heroes\">\n\t \t<li *ngFor=\"let hero of heros\" [class.selected]=\"hero === selectedHero\" (click)=\"onSelect(hero)\">\n\t\t \t<span class=\"badge\">{{ hero.id }}</span>\n\t \t\t{{ hero.name }}\n\t \t</li>\n\t</ul>\n\t\t",
+            template: "\n \t<h1> {{ title }} </h1>\n \t<h2>details! </h2>\n\t<ul class=\"heroes\">\n\t \t<li *ngFor=\"let hero of heros\" [class.selected]=\"hero === selectedHero\" (click)=\"onSelect(hero)\">\n\t\t \t<span class=\"badge\">{{ hero.id }}</span>\n\t \t\t{{ hero.name }}\n\t \t</li>\n\t</ul>\n \t<my-hero-detail [hero]=\"selectedHero\"></my-hero-detail>\n\t\t",
             styles: ["\n\t\t.selected {\n\t\t\tbackground-color: #CFD8DC !important;\n\t\t\tcolor: white;\n\t\t}\n\t\t.heroes {\n\t\t\tmargin: 0 0 2em 0;\n\t\t\tlist-style-type: none;\n\t\t\tpadding: 0;\n\t\t\twidth: 15em;\n\t\t}\n\t\t.heroes li {\n\t\t\tcursor: pointer;\n\t\t\tposition: relative;\n\t\t\tleft: 0;\n\t\t\tbackground-color: #EEE;\n\t\t\tmargin: .5em;\n\t\t\tpadding: .3em 0;\n\t\t\theight: 1.6em;\n\t\t\tborder-radius: 4px;\n\t\t}\n\t\t.heroes li.selected:hover {\n\t\t\tbackground-color: #BBD8DC !important;\n\t\t\tcolor: white;\n\t\t}\n\t\t.heroes li:hover {\n\t\t\tcolor: #607D8B;\n\t\t\tbackground-color: #DDD;\n\t\t\tleft: .1em;\n\t\t}\n\t\t.heroes .text {\n\t\t\tposition: relative;\n\t\t\ttop: -3px;\n\t\t}\n\t\t.heroes .badge {\n\t\t\tdisplay: inline-block;\n\t\t\tfont-size: small;\n\t\t\tcolor: white;\n\t\t\tpadding: 0.8em 0.7em 0 0.7em;\n\t\t\tbackground-color: #607D8B;\n\t\t\tline-height: 1em;\n\t\t\tposition: relative;\n\t\t\tleft: -1px;\n\t\t\ttop: -4px;\n\t\t\theight: 1.8em;\n\t\t\tmargin-right: .8em;\n\t\t\tborder-radius: 4px 0 0 4px;\n\t\t}\n\t\t"]
         }), 
         __metadata('design:paramtypes', [])
