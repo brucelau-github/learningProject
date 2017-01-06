@@ -7,10 +7,11 @@ import { Router } from '@angular/router';
 
 
 @Component({
-selector: 'my-heroes',
-templateUrl: './heroes.component.html',
-styleUrls:['./heroes.component.css'] ,
-providers: [HeroService]
+	moduleId: module.id,
+	selector: 'my-heroes',
+	templateUrl: 'heroes.component.html',
+	styleUrls:['heroes.component.css'] ,
+	providers: [HeroService]
 
 })
 export class HeroesComponent implements OnInit { 
@@ -29,7 +30,7 @@ export class HeroesComponent implements OnInit {
 	getHeroes(): void {
 		this.heroService.getHeroes().then(heroes => this.heros = heroes);
 	}
-	gotoDeail(): void {
-		this.router.navigate(['/detial',this.selectedHero.id]);
+	gotoDetail(): void {
+		this.router.navigate(['/detail',this.selectedHero.id]);
 	}
 }

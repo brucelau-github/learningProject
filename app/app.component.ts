@@ -8,11 +8,10 @@ import { Component } from '@angular/core';
 	 	<nav>
 		 	<a routerLink="/dashboard" routerLinkActive="active" >Dashboard</a>
 		 	<a routerLink="/heroes" routerLinkActive="active" >Heroes</a>
-		 	<a *ngFor="let hero of heroes"  [routerLink]="['/detail', hero.id]"  class="col-1-4"></a>
 	 	</nav>
 	 	<router-outlet></router-outlet>
 			`,
-	styleUrls: ['app.component.dss']
+	styleUrls: ['app.component.css']
 
 })
 export class AppComponent { 
